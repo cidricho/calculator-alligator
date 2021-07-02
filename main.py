@@ -18,7 +18,7 @@ class App(tk.Tk):
 
         ans = tk.Label(self,
                        textvariable=self.display_ans,
-                       font=('Lato', 10),
+                       font=('Courier', 10),
                        anchor="w")
         ans.grid(row=0, column=0, columnspan=4)
 
@@ -34,7 +34,7 @@ class App(tk.Tk):
                            state='disabled',
                            disabledbackground="white",
                            disabledforeground="black",
-                           font=('Lato', 20))
+                           font=('Courier', 20))
         display.grid(row=1,
                      column=0,
                      columnspan=4,
@@ -109,7 +109,7 @@ class App(tk.Tk):
             for btn in self.grid_slaves(row=i):
                 btn.grid(sticky="n" + "s" + "e" + "w", ipadx=20, ipady=20)
                 if i > 0:
-                    btn.config(font=('Verdana'))
+                    btn.config(font=('Courier'))
                     
 if __name__ == "__main__":
     app = App()
