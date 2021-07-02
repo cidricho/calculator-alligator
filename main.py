@@ -1,5 +1,6 @@
 import tkinter as tk
 
+
 class App(tk.Tk):
     """Main class of this application."""
     def __init__(self):
@@ -23,7 +24,7 @@ class App(tk.Tk):
 
         clear = tk.Button(self,
                           text="Clear",
-                          relief='flat',
+                          relief='flat')
         clear.grid(row=0, column=3)
 
         display = tk.Entry(self,
@@ -109,7 +110,8 @@ class App(tk.Tk):
                 btn.grid(sticky="n" + "s" + "e" + "w", ipadx=20, ipady=20)
                 if i > 0:
                     btn.config(font=('Verdana'))
-
+                    
 if __name__ == "__main__":
     app = App()
     app.mainloop()
+
