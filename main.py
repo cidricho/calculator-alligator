@@ -8,4 +8,6 @@ b_del.grid(row=2, column=1)
 b_ac.grid(row=2, column=2)
 b_div.grid(row=2, column=3)
 
-
+if __name__ == "__main__":
+    app = App()
+    app.mainloop()
