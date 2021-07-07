@@ -7,7 +7,7 @@ class App(tk.Tk):
         super().__init__()
 
         # Sets the title of the window.
-        self.title("Calculator")
+        self.title("Calculator Alligator")
 
         # Disallow window resizing.
         self.resizable(False, False)
@@ -18,13 +18,14 @@ class App(tk.Tk):
 
         ans = tk.Label(self,
                        textvariable=self.display_ans,
-                       font=('Lato', 10),
+                       font=('Courier', 10),
                        anchor="w")
         ans.grid(row=0, column=0, columnspan=4)
 
         clear = tk.Button(self,
                           text="Clear",
                           relief='flat',
+                          font=('Courier', 10),
                           command=lambda: self.clear_ans())
         clear.grid(row=0, column=3)
 
@@ -32,9 +33,10 @@ class App(tk.Tk):
                            textvariable=self.display_string,
                            relief="ridge",
                            justify='right',
-                           state='readonly',
-                           readonlybackground="white",
-                           font=('Lato', 20))
+                           state='disabled',
+                           disabledbackground="black",
+                           disabledforeground="white",
+                           font=('Courier', 20))
         display.grid(row=1,
                      column=0,
                      columnspan=4,
@@ -123,7 +125,7 @@ class App(tk.Tk):
             for btn in self.grid_slaves(row=i):
                 btn.grid(sticky="n" + "s" + "e" + "w", ipadx=20, ipady=20)
                 if i > 0:
-                    btn.config(font=('Verdana'))
+                    btn.config(font=('Courier'))
 
     def clean_expression(self, expr) -> str:
         """Gets the expression from the screen and replaces the signs to be used as python expression."""
