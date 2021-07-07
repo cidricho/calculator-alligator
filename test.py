@@ -24,3 +24,5 @@ class CalculatorTest(unittest.TestCase):
     def test_evaluate_chain(self):
         self.assertEqual(self.calculator.evaluate("2*-5-1/3.5+9"),
                          -1.2857142857142865)
+
+        
