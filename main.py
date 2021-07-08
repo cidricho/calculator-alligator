@@ -22,13 +22,6 @@ class App(tk.Tk):
                        anchor="w")
         ans.grid(row=0, column=0, columnspan=4)
 
-        clear = tk.Button(self,
-                          text="Clear",
-                          relief='flat',
-                          font=('Courier', 10),
-                          command=lambda: self.clear_ans())
-        clear.grid(row=0, column=3)
-
         display = tk.Entry(self,
                            textvariable=self.display_string,
                            relief="ridge",
@@ -54,7 +47,7 @@ class App(tk.Tk):
         b_del = tk.Button(self,
                           text='Del',
                           command=lambda: self.delete_screen())
-        b_ac = tk.Button(self, text='AC', command=lambda: self.clear_screen())
+        b_ac = tk.Button(self, text='Clear', command=lambda: self.clear_screen())
         b_div = tk.Button(self,
                           text='÷',
                           command=lambda: self.action_operation('÷'))
